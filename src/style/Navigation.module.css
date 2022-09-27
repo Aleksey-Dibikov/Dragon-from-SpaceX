@@ -1,0 +1,21 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #2a363b;
+}
+.activeLink {
+  composes: link;
+  color: rgb(57, 91, 202);
+  text-shadow: 3px 3px 10px rgb(27, 141, 135), -3px -3px 10px yellow;
+}
+
+.headerNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsl(199, 17%, 75%);
+    margin-bottom: 2em;
+}

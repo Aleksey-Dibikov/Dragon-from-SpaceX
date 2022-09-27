@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import { fetchDragons, fetchDragonsAll } from "../service/apiService";
-import s from './Dragon.module.css';
+import s from '../style/Dragon.module.css';
 
 
 export function Dragon() {
@@ -29,7 +29,7 @@ export function Dragon() {
             <h1 className={s.header}>{dragon.name}</h1>
             <div className={s.slideContainer}>
                 <Zoom scale={0.4}>
-                    {images.map((each, index) => <img alt={dragon.name} key={index} style={{width: "100%"}} src={each} />)}
+                    {images.map((each, index) => <img alt={dragon.name} key={index} style={{ width: "100%",  height:"100%"}} src={each} />)}
                 </Zoom>
             </div>
             <p className={s.description}><span className={s.titleDescription}>Description: </span>{dragon.description}</p>

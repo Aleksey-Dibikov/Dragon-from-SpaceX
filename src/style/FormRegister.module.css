@@ -1,0 +1,50 @@
+.containerForm{
+    width: 600px;
+    border: 1px solid rgb(193, 200, 193);
+    border-radius: 100px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    width: 350px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input{
+    border: none;
+    border-bottom: 1px solid rgba(64, 64, 64, 0.977);
+    width: 350px;
+    height: 25px;
+    outline: currentColor;
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 1.5em;
+    }
+
+    .containerForm{
+        width: 320px;
+    }
+
+    .form{
+        width: 300px;
+    }
+
+    .input{
+        width: 280px;
+    }
+}
