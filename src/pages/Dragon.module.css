@@ -4,19 +4,18 @@
     margin: auto;
 }
 
-h1, h2{
+.header,.title{
     display: flex;
-    padding: 20px;
     flex-direction: column;
     align-items: center;
 }
 
 .slideContainer{
-    max-width: 50%;
+    max-width: 70%;
     margin: auto;
 }
 
-.description{
+.titleDescription{
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
@@ -75,4 +74,27 @@ h1, h2{
     flex-direction: column;
     align-items: center;
     margin: 30px 0;
+}
+
+@media screen and (max-width: 600px) {
+    .params {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .params li:not(:last-child) {
+        border-right: none;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .header {
+        font-size: 1.5em;
+    }
+
+    .title {
+        font-size: 1.3em;
+    }
 }
