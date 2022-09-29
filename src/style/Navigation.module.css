@@ -19,3 +19,10 @@
     border-bottom: 1px solid hsl(199, 17%, 75%);
     margin-bottom: 2em;
 }
+
+.name {
+  padding: 12px;
+  font-size: 21px;
+  font-weight: 500;
+  margin-right: 12px;
+}

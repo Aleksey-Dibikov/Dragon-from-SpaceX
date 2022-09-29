@@ -1,31 +1,40 @@
 import { Route, Routes } from 'react-router-dom';
 import { Dragon } from './pages/Dragon';
 import AppBar from './components/AppBar';
-import { Login } from './pages/LogIn';
-import { Register } from './pages/Register';
 import HomePage from './pages/HomePage';
+import RegisterPage from './pages/RegisterPage';
+import LogInPage from './pages/LogInPage';
+import { PublicRoute } from './routes/PublicRoute';
+import AuthSelector from './hooks/authSelector';
+import { PrivateRoute } from './routes/PrivateRoute';
 
 function App() {
+  const {isAuth} = AuthSelector()
 
   return (
     <>
       <AppBar />
       <Routes>
-        <Route
-          path="/"
-          element={<HomePage />}
+        <Route path="/"
+          element={<HomePage/>}
         />
-        <Route
-          path="/dragon"
-          element={<Dragon />}
+        <Route path="/dragon"
+          element={<PrivateRoute
+            isAuth={isAuth}
+            component={Dragon}
+          />}
         />
-        <Route
-          path="/login"
-          element={<Login />}
+        <Route path="/login"
+          element={<PublicRoute
+            isAuth={isAuth}
+            component={LogInPage}
+          />}
         />
-        <Route
-          path="/register"
-          element={<Register />}
+        <Route path="/register"
+          element={<PublicRoute
+            isAuth={isAuth}
+            component={RegisterPage}
+          />}
         />
       </Routes>
     </>
