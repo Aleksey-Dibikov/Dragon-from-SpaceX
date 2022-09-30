@@ -2,7 +2,7 @@ import { useState } from 'react';
 import s from '../../style/FormRegister.module.css';
 import style from '../../style/Dragon.module.css';
 
-function LogInForm({ title, handleSubmit }) {
+function Form({ title, handleSubmit }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -49,4 +49,4 @@ function LogInForm({ title, handleSubmit }) {
     )
 }
 
-export default LogInForm;
+export default Form;

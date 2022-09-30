@@ -1,8 +1,8 @@
 import AuthNav from './AuthNav';
 import Navigation from './Navigation';
 import UserMenu from './UserMenu';
-import s from '../style/Navigation.module.css';
 import AuthSelector from '../hooks/authSelector';
+import s from '../style/Navigation.module.css';
 
 function AppBar() {
   const { isAuth } = AuthSelector();

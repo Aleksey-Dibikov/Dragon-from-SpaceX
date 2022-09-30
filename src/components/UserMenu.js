@@ -9,7 +9,7 @@ export default function UserMenu() {
     const { email } = AuthSelector();
 
   return (
-    <div>
+    <div className={s.userMobileMenu}>
       <span className={s.name}>Welcome, { email }</span>
       <button type="button"
         className={style.btn}

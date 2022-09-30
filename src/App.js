@@ -8,12 +8,15 @@ import { PublicRoute } from './routes/PublicRoute';
 import AuthSelector from './hooks/authSelector';
 import { PrivateRoute } from './routes/PrivateRoute';
 
+import MobileNavigation from './components/MobileNavigation/MobileNavigation';
+
 function App() {
   const {isAuth} = AuthSelector()
 
   return (
     <>
       <AppBar />
+      <MobileNavigation />
       <Routes>
         <Route path="/"
           element={<HomePage/>}

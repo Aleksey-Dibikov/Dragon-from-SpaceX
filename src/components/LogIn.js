@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { setUser } from "../redux/Auth/AuthSlice";
-import LogInForm from "./Form/LogInForm";
+import Form from "./Form/Form";
 
 function LogIn() {
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function LogIn() {
     }
 
     return (
-        <LogInForm
+        <Form
             title='Log in'
             handleSubmit={handleLog}
         />

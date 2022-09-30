@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { setUser } from "../redux/Auth/AuthSlice";
-import SignUpForm from "./Form/SignUpForm";
+import Form from "./Form/Form";
 
 
 function SignUp() {
@@ -20,7 +20,7 @@ function SignUp() {
 
 
     return (
-        <SignUpForm
+        <Form
             title='Register'
             handleSubmit={handleRegister}
         />
