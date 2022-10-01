@@ -9,6 +9,7 @@ import AuthSelector from './hooks/authSelector';
 import { PrivateRoute } from './routes/PrivateRoute';
 
 import MobileNavigation from './components/MobileNavigation/MobileNavigation';
+import { Dragon2 } from './pages/Dragon2';
 
 function App() {
   const {isAuth} = AuthSelector()
@@ -21,12 +22,6 @@ function App() {
         <Route path="/"
           element={<HomePage/>}
         />
-        <Route path="/dragon"
-          element={<PrivateRoute
-            isAuth={isAuth}
-            component={Dragon}
-          />}
-        />
         <Route path="/login"
           element={<PublicRoute
             isAuth={isAuth}
@@ -37,6 +32,18 @@ function App() {
           element={<PublicRoute
             isAuth={isAuth}
             component={RegisterPage}
+          />}
+        />
+        <Route path="/dragon"
+          element={<PrivateRoute
+            isAuth={isAuth}
+            component={Dragon}
+          />}
+        />
+        <Route path="/dragon2"
+          element={<PrivateRoute
+            isAuth={isAuth}
+            component={Dragon2}
           />}
         />
       </Routes>

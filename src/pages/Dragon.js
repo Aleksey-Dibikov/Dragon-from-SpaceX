@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import { fetchDragons, fetchDragonsAll } from "../service/apiService";
+import { fetchDragons } from "../service/ApiDragons/apiService";
 import s from '../style/Dragon.module.css';
 
 
@@ -25,7 +25,7 @@ export function Dragon() {
 
     return (
         <>
-            <div className={s.container}>
+            <div className={s.container} key={dragon.id}>
             <h1 className={s.header}>{dragon.name}</h1>
             <div className={s.slideContainer}>
                 <Zoom scale={0.4}>

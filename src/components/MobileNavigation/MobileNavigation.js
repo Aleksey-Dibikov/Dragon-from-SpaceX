@@ -26,7 +26,7 @@ function MobileNavigation() {
     }
 
     return (
-        <div className={s.mobileNavigation}>
+        <header className={s.mobileNavigation}>
             <Navigation/>
             {open ? closeIcon : hamburgerIcon}
             {open &&
@@ -36,7 +36,7 @@ function MobileNavigation() {
                         : <AuthNav isMobile={true} closeMobileMenu={closeMobileMenu} />}
                 </div>
             }
-        </div>
+        </header>
     )
 }
 

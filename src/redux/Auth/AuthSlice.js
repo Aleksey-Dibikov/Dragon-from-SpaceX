@@ -4,6 +4,7 @@ const initialState = {
     email: null,
     token: null,
     id: null,
+    isFetchingCurrentUser: false,
 };
 
 const authSlice = createSlice({
@@ -19,6 +20,11 @@ const authSlice = createSlice({
             state.email = null;
             state.token = null;
             state.id = null;
+        },
+        fetchCurrentUser(state, action) {
+            state.user = action.payload;
+            state.isAuth = true;
+            state.isFetchingCurrentUser = false;
         },
     },
 });

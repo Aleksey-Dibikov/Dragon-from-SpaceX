@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import AuthSelector from '../hooks/authSelector';
 import s from '../style/Navigation.module.css';
+import AllDragons from './AllDragons/AllDragons';
 
 function Navigation() {
     const { isAuth } = AuthSelector();
@@ -14,12 +15,7 @@ function Navigation() {
             >
                 Home page
             </NavLink>
-            : <NavLink
-                to="/dragon"
-                className={({ isActive }) => (isActive ? s.activeLink : s.link)}
-            >
-                Dragon 1
-            </NavLink>}
+            : <AllDragons/>}
         </nav>
     )
 }

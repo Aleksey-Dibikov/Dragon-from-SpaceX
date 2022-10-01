@@ -8,7 +8,7 @@ function AuthNav(props) {
     const animateTo = { opacity: 1, y: 0 };
 
     return (
-        <motion.div
+        <motion.nav
             className={s.mobileMenu}
             initial={animateForm}
             animate={animateTo}
@@ -27,7 +27,7 @@ function AuthNav(props) {
             >
                 Sign Up
             </NavLink>
-        </motion.div>
+        </motion.nav>
     );
 };
 
