@@ -6,13 +6,13 @@ function AllDragons() {
         <nav>
             <NavLink
                 to="/dragon"
-                activeClassName={({ isActive }) => (isActive ? s.activeLink : s.link)}
+                className={({ isActive }) => (isActive ? s.activeLink : s.link)}
             >
                 Dragon 1
             </NavLink>
             <NavLink
                 to="/dragon2"
-                activeClassName={({ isActive }) => (isActive ? s.activeLink : s.link)}
+                className={({ isActive }) => (isActive ? s.activeLink : s.link)}
             >
                 Dragon 2
             </NavLink>

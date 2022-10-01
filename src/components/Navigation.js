@@ -9,13 +9,14 @@ function Navigation() {
     return (
         <nav>
             {!isAuth
-            ? <NavLink 
-                to="/"
-                className={({isActive}) => (isActive ? s.activeLink : s.link)}
-            >
-                Home page
-            </NavLink>
-            : <AllDragons/>}
+                ? <NavLink
+                    exact
+                    to="/"
+                    className={({ isActive }) => (isActive ? s.activeLink : s.link)}
+                >
+                    Home page
+                </NavLink>
+                : <AllDragons />}
         </nav>
     )
 }

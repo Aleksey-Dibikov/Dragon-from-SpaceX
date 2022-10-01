@@ -12,14 +12,15 @@ import MobileNavigation from './components/MobileNavigation/MobileNavigation';
 import { Dragon2 } from './pages/Dragon2';
 
 function App() {
-  const {isAuth} = AuthSelector()
+  const { isAuth } = AuthSelector();
+
 
   return (
     <>
       <AppBar />
       <MobileNavigation />
       <Routes>
-        <Route path="/"
+        <Route path="/" exact
           element={<HomePage/>}
         />
         <Route path="/login"

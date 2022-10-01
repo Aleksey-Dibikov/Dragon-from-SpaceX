@@ -9,7 +9,7 @@ function LogIn() {
     function handleLog(email, password) {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
-            .then(({user}) => {
+            .then(({ user }) => {
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,
