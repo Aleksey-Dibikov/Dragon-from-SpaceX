@@ -31,6 +31,12 @@
     outline: currentColor;
 }
 
+.imgLogo{
+    display: flex;
+    width: 600px;
+    margin: auto;
+}
+
 @media screen and (max-width: 600px) {
     h1{
         font-size: 1.5em;

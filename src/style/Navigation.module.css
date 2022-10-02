@@ -18,7 +18,7 @@ text-shadow: 3px 3px 10px rgb(53 233 223), -3px -3px 10px #4bff00;
 
 .headerNav, .mobileNavigation{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 80px;
     border-bottom: 1px solid hsl(199, 17%, 75%);
