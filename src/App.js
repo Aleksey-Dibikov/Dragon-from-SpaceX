@@ -1,15 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import { Dragon } from './pages/Dragon';
-import AppBar from './components/AppBar';
-import HomePage from './pages/HomePage';
-import RegisterPage from './pages/RegisterPage';
-import LogInPage from './pages/LogInPage';
 import { PublicRoute } from './routes/PublicRoute';
-import AuthSelector from './hooks/authSelector';
 import { PrivateRoute } from './routes/PrivateRoute';
-
+import AuthSelector from './hooks/authSelector';
+import AppBar from './components/AppBar';
 import MobileNavigation from './components/MobileNavigation/MobileNavigation';
-import { Dragon2 } from './pages/Dragon2';
+import HomePage from './pages/HomePage';
+import LogInPage from './pages/LogInPage';
+import RegisterPage from './pages/RegisterPage';
+import Dragon from './pages/Dragon';
+import Dragon2 from './pages/Dragon2';
 
 function App() {
   const { isAuth } = AuthSelector();
@@ -20,7 +19,7 @@ function App() {
       <AppBar />
       <MobileNavigation />
       <Routes>
-        <Route path="/" exact
+        <Route path="/home"
           element={<HomePage/>}
         />
         <Route path="/login"

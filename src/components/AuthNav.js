@@ -9,7 +9,7 @@ function AuthNav(props) {
 
     return (
         <motion.nav
-            className={s.mobileMenu}
+            className={s.mobileAuthMenu}
             initial={animateForm}
             animate={animateTo}
         >

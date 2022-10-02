@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
+import { fetchAllDragons } from "../service/ApiDragons/apiService";
 import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import { fetchAllDragons } from "../service/ApiDragons/apiService";
 import s from '../style/Dragon.module.css';
 
-
-export function Dragon2() {
+function Dragon2() {
     const [dragons, setDragons] = useState([]);
 
     useEffect(() => {
@@ -47,3 +46,5 @@ export function Dragon2() {
         </>
     )
 };
+
+export default Dragon2;

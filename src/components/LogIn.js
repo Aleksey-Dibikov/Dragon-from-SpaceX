@@ -16,7 +16,9 @@ function LogIn() {
                     token: user.accessToken,
                 }));
             })
-        .catch()
+            .catch((error) => {
+                console.error(error)
+            })
     }
 
     return (

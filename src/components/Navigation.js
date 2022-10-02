@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import AuthSelector from '../hooks/authSelector';
-import s from '../style/Navigation.module.css';
 import AllDragons from './AllDragons/AllDragons';
+import s from '../style/Navigation.module.css';
 
 function Navigation() {
     const { isAuth } = AuthSelector();
@@ -10,15 +10,14 @@ function Navigation() {
         <nav>
             {!isAuth
                 ? <NavLink
-                    exact
-                    to="/"
+                    to="/home"
                     className={({ isActive }) => (isActive ? s.activeLink : s.link)}
                 >
                     Home page
                 </NavLink>
                 : <AllDragons />}
         </nav>
-    )
+    );
 }
 
 export default Navigation;

@@ -23,7 +23,7 @@ const middleware = [
 const authPersistConfig = {
   key: 'user',
   storage,
-  whitelist: ['token'],
+  whitelist: ['email',  'token', 'id'],
 }
 
 

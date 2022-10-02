@@ -9,13 +9,17 @@ function SignUp() {
 
     function handleRegister (email, password) {
         const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password).then(({user}) => {
-            dispatch(setUser({
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(({ user }) => {
+                dispatch(setUser({
                     email: user.email,
                     id: user.uid,
                     token: user.accessToken,
-                }));
-            }).catch(console.error)
+                }))
+            })
+            .catch((error) => {
+                console.error(error)
+            })
     }
 
 
