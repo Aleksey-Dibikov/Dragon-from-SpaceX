@@ -6,10 +6,10 @@ function LogInPage() {
   return (
     <>
       <img src={Logo} alt="dragon logo" className={s.imgLogo} />
-     <div className={s.containerForm}>
-      <h1>Login page</h1>
-      <LogIn />
-    </div>
+      <div className={s.containerForm}>
+        <h1>Login page</h1>
+        <LogIn />
+      </div>
     </>
   )
 }

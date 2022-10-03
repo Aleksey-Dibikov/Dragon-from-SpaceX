@@ -37,7 +37,13 @@
     margin: auto;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767.98px) {
+    .imgLogo {
+        display: flex;
+        width: 320px;
+        margin: auto;
+    }
+
     h1{
         font-size: 1.5em;
     }
