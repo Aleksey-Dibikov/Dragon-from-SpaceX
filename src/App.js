@@ -10,6 +10,7 @@ import RegisterPage from './pages/RegisterPage';
 import Dragon from './pages/Dragon';
 import Dragon2 from './pages/Dragon2';
 import Container from './pages/Container';
+import Spinner from './components/Spinner/Spinner';
 
 function App() {
   const { isAuth } = AuthSelector();
@@ -17,7 +18,7 @@ function App() {
 
 
   return (
-    <>
+    <Spinner/> && <>
       <AppBar />
       <MobileNavigation />
       <Routes>
