@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { toast } from 'react-toastify';
 import { setUser } from "../redux/Auth/AuthSlice";
 import Form from "./Form/Form";
 
@@ -15,8 +16,10 @@ function LogIn() {
                     id: user.uid,
                     token: user.accessToken,
                 }));
+                toast.success('Success')
             })
             .catch((error) => {
+                toast('invalid email or password!!!')
                 console.error(error)
             })
     }
