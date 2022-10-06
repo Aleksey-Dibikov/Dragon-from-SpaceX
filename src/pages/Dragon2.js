@@ -3,23 +3,30 @@ import { fetchAllDragons } from "../service/ApiDragons/apiService";
 import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import s from '../style/Dragon.module.css';
+import Spinner from "../components/Spinner/Spinner";
 
 function Dragon2() {
     const [dragons, setDragons] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        fetchAllDragons()
-            .then((data) => 
-                setDragons(data)
-            )
-            .catch((error) => {
-                console.log(error.message);
-            })
-    });
+        setIsLoading(true);
+        setTimeout(() => {
+            fetchAllDragons()
+                .then((data) => {
+                    setDragons(data)
+                    setIsLoading(false);
+                })
+                .catch((error) => {
+                    console.error(error.message);
+                    setIsLoading(false);
+                })
+        }, 1500);
+    }, []);
 
 
     return (
-        <>
+        isLoading ? <Spinner/> : <>
             {dragons.slice(1).map((dragon) => {
                 return (
                     <div className={s.container} key={dragon.id}>

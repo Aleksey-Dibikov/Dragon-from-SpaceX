@@ -10,7 +10,8 @@ function Navigation() {
         <nav>
             {!isAuth
                 ? <NavLink
-                    to="/home"
+                    to="/"
+                    end
                     className={({ isActive }) => (isActive ? s.activeLink : s.link)}
                 >
                     Home page

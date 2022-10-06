@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchDragons } from "../service/ApiDragons/apiService";
 import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import Spinner from '../components/Spinner/Spinner';
 import s from '../style/Dragon.module.css';
 
 
@@ -9,22 +10,28 @@ function Dragon() {
     const [dragon, setDragon] = useState([]);
     const [images, setImages] = useState([]);
     const [height, setHeight] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        fetchDragons()
+        setIsLoading(true);
+        setTimeout(() => {
+            fetchDragons()
             .then((data) => {
                 setDragon(data);
                 setHeight(data.height_w_trunk.meters);
-                setImages(data.flickr_images)
+                setImages(data.flickr_images);
+                setIsLoading(false);
             })
             .catch((error) => {
-                console.log(error.message);
+                console.error(error.message);
+                setIsLoading(false);
             })
-    });
+        }, 1500);
+    }, []);
 
 
     return (
-        <>
+        isLoading ? <Spinner/> : <>
             <div className={s.container} key={dragon.id}>
                 <h1 className={s.header}>{dragon.name}</h1>
                 <div className={s.slideContainer}>
