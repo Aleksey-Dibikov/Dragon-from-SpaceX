@@ -26,6 +26,7 @@
     list-style: none;
     display: flex;
     text-align: center;
+    padding: 0;
 }
 
 .params li {
@@ -79,9 +80,11 @@
 }
 
 @media screen and (max-width: 767.98px) {
+    .container{
+        max-width: 80%;
+    }
     .params {
         flex-direction: column;
-        padding: 0;
     }
 
     .params li:not(:last-child) {
@@ -101,6 +104,6 @@
     }
 
     .slideContainer {
-        max-width: 80%;
+        max-width: 70%;
     }
 }
